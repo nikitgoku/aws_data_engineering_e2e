@@ -1,3 +1,4 @@
+# End-to-End AWS Data Pipeline for Spotify Streaming Analytics
 ![image](https://github.com/nikitgoku/aws_data_engineering_e2e/assets/114753615/b35499e2-4cf9-41fc-a9f0-803ff6ae38d7)
 
 I developed a comprehensive AWS Cloud Data Engineering End-to-End Project where I utilized my personal Spotify streaming data in CSV format and seamlessly uploaded it into Amazon S3. I then established a database and employed Glue Crawler to intricately analyze the streaming data stored in S3, determining its schema. Subsequently, I orchestrated an Amazon Glue ETL job, using an Apache Spark script to adeptly convert the CSV data into the efficient parquet format. The transformed data was then stored back in S3, paving the way for insightful and interactive queries. To achieve this, I employed Amazon Athena, allowing me to extract meaningful insights from the parquet database.
