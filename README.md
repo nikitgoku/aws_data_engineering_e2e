@@ -17,4 +17,5 @@ A `Spark` script was developed which utilized Glue's `dynamic frame` converted i
 ## **Load**
 The final `spark dataframe` was converted back into Glue `dynamic frame` and loaded as a `.parquet` file back into `S3` along with the corresponding table in the Glue Data Catalog.
 
+## **Querying**
 With the Glue Data Catalog created after running the `spark script`, Amazon Athena was used to run queries on the data to get relevan insigths from the data.
