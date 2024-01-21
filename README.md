@@ -12,6 +12,9 @@ To start the transformation job, a `Glue Data Catalog` service with a database a
 
 After sucessfully incorporating the table with the necessary schema a `Glue ETL job` was created whose main was to modify the source CSV file using the Glue Data Catalog and upload the modified data frame in the parquet format into S3 and create a corresponding target data catalog that keeps the metadata information of the target object.
 
-A `Spark` script was developed which utilized Glue's `dynamic frame` converted into `spark dataframe` to drop unnecessary columns, remove NULL values, rename the columns with relevant names and extract month and day details from timestamp columns. The final `spark dataframe` was converted back into Glue `dynamic frame` and saved as a `.parquet` file back into `S3` along with the corresponding table in the Glue Data Catalog.
+A `Spark` script was developed which utilized Glue's `dynamic frame` converted into `spark dataframe` to drop unnecessary columns, remove NULL values, rename the columns with relevant names and extract month and day details from timestamp columns. 
+
+## **Load**
+The final `spark dataframe` was converted back into Glue `dynamic frame` and loaded as a `.parquet` file back into `S3` along with the corresponding table in the Glue Data Catalog.
 
 With the Glue Data Catalog created after running the `spark script`, Amazon Athena was used to run queries on the data to get relevan insigths from the data.
